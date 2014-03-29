@@ -49,7 +49,9 @@ mv index.php examples
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_appdir},%{_cachedir}}
-cp -a *.php bindings $RPM_BUILD_ROOT%{_appdir}
+# NOTE:
+# phpqrcode.php is merged version of qr*.php files, see tools/merge.php
+cp -a phpqrcode.php bindings $RPM_BUILD_ROOT%{_appdir}
 
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 cp -a examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
