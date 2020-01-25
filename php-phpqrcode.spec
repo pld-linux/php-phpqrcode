@@ -1,6 +1,5 @@
 %define		pkgname	phpqrcode
 %define		php_min_version 5.0.0
-%include	/usr/lib/rpm/macros.php
 Summary:	PHP library for generating two-dimensional barcodes
 Name:		php-%{pkgname}
 Version:	1.1.4
